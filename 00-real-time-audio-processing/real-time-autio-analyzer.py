@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
   host="localhost",
   user="root",
   passwd="",
-  database="the-project-aisle"
+  database="hate_speech_database"
 )
 
 
@@ -21,7 +21,7 @@ knowledgebase = []
 
 def database_loader():
 
-	with open('database/knowledgebase.txt') as f:
+	with open('knowledgebase.txt') as f:
 	  
 	  for index, line in enumerate(f):
 	    word = line.strip().lower()
