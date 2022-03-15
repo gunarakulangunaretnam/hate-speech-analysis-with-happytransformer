@@ -68,25 +68,20 @@ The AI community building the future, build, train and deploy state of the art m
 
 ## Hate Speech Detection System
 
-In this repository, there are two different types of applications are available. Those are "00-real-time-audio-processing" and "01-text-processing-copy-paste-method", both applications depends on "Hate-speech-CNERG/dehatebert-mono-english" BERT model.
+In this repository, there are three different types of applications are available. Those are "00-real-time-audio-processing" and "01-real-time-audio-processing-without-knowledgebase-filtering" and "02-text-processing-copy-paste-method", these prototypes are depended on "Hate-speech-CNERG/dehatebert-mono-english" BERT model.
 
 ![](github-readme-content/github.jpg)
 
 ## 00-real-time-audio-processing
 
-This prototype is used to analyze hate speeches in real-time audio. It has a knowledge base that contains hate keywords. Based on the given keywords, it analyzes & identifies the meaning behind a sentence.
+This prototype is used to analyze hate speeches in real-time audio. It has a knowledgebase that contains hate keywords. Based on the given keywords, it analyzes & identifies the meaning behind a sentence.
 
 ### Features
 
 - Real-time audio analysis
 - Youtube videos’ audio analysis
 
-### Basic Architecture
-
-![](github-readme-content/audio-digram.png)
-
-
-### Top Level Architecture
+### Architecture
 
 ![](github-readme-content/real-time-diagram.drawio.png)
 
@@ -146,7 +141,7 @@ hate-speech-analysis-with-happytransformer\00-real-time-audio-processing\databas
 ![](github-readme-content/database-creation.jpg)
 
 
-**Step 02:** Import the databsae into that empty database.
+**Step 02:** Import the database into that empty database.
 ![](github-readme-content/import-database.jpg)
 
 
@@ -196,4 +191,150 @@ hate-speech-analysis-with-happytransformer\00-real-time-audio-processing\databas
 
 **Note:** Now, this system does not have any backend panel.
 
-## 00-real-time-audio-processing
+## 01-real-time-audio-processing-without-knowledgebase-filtering
+
+
+This prototype is used to analyze hate speeches in real-time audio. It DOES NOT HAVE a knowledgebase. It is similar to the previous prototype "00-real-time-audio-processing", but it is missing the knowledgebase in the middle
+
+### Features
+
+- Real-time audio analysis
+- Youtube videos’ audio analysis
+
+### Architecture
+
+![](github-readme-content/audio-digram.png)
+
+### Configuration and Setup
+
+In this step, we will learn, how to step "01-real-time-audio-processing-without-knowledgebase-filtering" project.
+
+
+#### Setup database
+
+The database is found the following directory, deploy this database in the MySQL server.
+
+```
+hate-speech-analysis-with-happytransformer\01-real-time-audio-processing-without-knowledgebase-filtering\database\without_knowledgebase_hate_speech_database.sql
+```
+
+**Step 01:** Create an empty database in the MySQL environment with the name of "without_knowledgebase_hate_speech_database".
+
+![](github-readme-content/create-database-no-filter.jpg)
+
+
+**Step 02:** Import the database into that empty database.
+
+![](github-readme-content/import-database-no-filter.jpg)
+
+#### Install Dependencies
+
+- Installing HappyTransformer
+
+    ```python
+    pip install happytransformer
+    ```
+
+- Installing MySQL connector
+
+    ```python
+    pip install mysql-connector-python
+    ```
+
+- Installing MySQL Speech Recognition
+
+    ```python
+    pip install SpeechRecognition
+    ```
+
+**Note:** After setting up database and installing dependencies, then the system is ready to be used.
+
+### Running and Execution
+
+
+**Note:** To run this program, execute the following script.
+
+```python
+  hate-speech-analysis-with-happytransformer/01-real-time-audio-processing-without-knowledgebase-filtering/real-time-autio-analyzer-without-knowledgebase.py
+```
+
+- To run this program:
+
+  ```python
+    python real-time-autio-analyzer-without-knowledgebase.py
+  ```
+
+![](github-readme-content/demo-no-filter.jpg)
+
+### Output
+
+![](github-readme-content/output-no-filtering.jpg)
+
+
+## 02-text-processing-copy-paste-method
+
+This is a text processing method of hate speech detection. In this prototype, no real-time audio is available.
+
+The system works as the following, when the user presses (CTRL + C), it gets text content from the clipboard and start hate speech process in the background.
+
+This is simple prototype, it does not have any database.
+
+The main advantage of this system is, we can copy text data from social medias, or any other platforms.
+
+### Features
+
+- Social media data can be analyzed.
+- Any sort of text data can be analyzed.
+
+#### Install Dependencies
+
+- Installing HappyTransformer
+
+    ```python
+    pip install happytransformer
+    ```
+- Installing pyperclip
+
+  ```python
+  pip install pyperclip
+  ```
+
+- Installing pynput
+
+  ```python
+  pip install pynput
+  ```
+
+
+
+### Running and Execution
+
+**Note:** To run this program, execute the following script.
+
+  ```python
+    hate-speech-analysis-with-happytransformer/02-text-processing-copy-paste-method/run.py
+  ```
+
+![](github-readme-content/copy-demo.gif)
+
+
+### Output
+
+
+![](github-readme-content/text-output.jpg)
+
+**NOTE:** The output file is found in the following directory.
+
+
+```
+hate-speech-analysis-with-happytransformer\02-text-processing-copy-paste-method\data.txt
+```
+
+Any Questions? | Conduct Me
+---
+
+* [Linkedin Profile](https://www.linkedin.com/in/gunarakulan-gunaretnam-161119156/)
+* [Facebook Profile](https://www.facebook.com/gunarakulan)
+* [Twitter Profile](https://twitter.com/gunarakulang)
+* [Instagram Profile](https://www.instagram.com/gunarakulan_gunaretnam/)
+* [Youtube Channel](https://www.youtube.com/channel/UCMWkED5sabgVZSCKjZuRJXA/videos)
