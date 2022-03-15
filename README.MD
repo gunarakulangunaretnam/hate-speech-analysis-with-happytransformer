@@ -69,3 +69,58 @@ The AI community building the future, build, train and deploy state of the art m
 ## Hate Speech Detection System
 
 In this repository, there are two different types of applications are available. Those are "00-real-time-audio-processing" and "01-text-processing-copy-paste-method", both applications depends on "Hate-speech-CNERG/dehatebert-mono-english" BERT model.
+
+![](github-readme-content/github.jpg)
+
+## 00-real-time-audio-processing
+
+This prototype is used to analyze hate speeches in real-time audio. It has a knowledge base that contains hate keywords. Based on the given keywords, it analyzes & identifies the meaning behind a sentence.
+
+### Features
+
+- Real-time audio analysis
+- Youtube videos’ audio analysis
+
+### Basic Architecture
+
+![](github-readme-content/audio-digram.png)
+
+
+### Top Level Architecture
+
+![](github-readme-content/real-time-diagram.drawio.png)
+
+**Note:** This prototype is combined with knowledgebase model and AI based model, first it checks if a hate keyword is matched in the target text from the knowledgebase file, if it is match (Filtering Process), then it goes to the next step to check with the AI model to understand the meaning behind the sentence, the AI model will return probability to determine that targeted text is a hate speech or not.
+
+- **Step 01:** Filtering - Match hate keywords from the knowledgebase.
+
+- **Step 02:** AI Model - Here, the filtered targeted text will be used to check the probability of hate speech with a AI model.
+
+
+**Note:** If a hate speech sentence not contain any keyboards from the knowledgebase, then It won't send to the AI model for further processing.
+
+
+### Knowledgebase
+
+The knowledgebase is a text file that is found on the following directory.
+
+```
+
+hate-speech-analysis-with-happytransformer\00-real-time-audio-processing\knowledgebase.txt
+
+```
+
+![](github-readme-content/know.jpg)
+
+**IMPORTANT NOTE:** Here, new hate keywords could be entered, If we want to introduce new hate keywords, we can simply enter in this knowledgebase.txt file as a new line.
+
+
+### Why Knowledgebase?
+
+The knowledgebase filters a targeted sentence in a Non-AI method to send to the targeted text next step level.
+
+This prototype is specifically looking for hate speech that contains certain keywords in it.   
+
+- To reduce over-processing issue.
+- To make it easier
+- To process hate speech in a specific area
