@@ -148,3 +148,52 @@ hate-speech-analysis-with-happytransformer\00-real-time-audio-processing\databas
 
 **Step 02:** Import the databsae into that empty database.
 ![](github-readme-content/import-database.jpg)
+
+
+#### Install Dependencies
+
+- Installing HappyTransformer
+
+    ```python
+    pip install happytransformer
+    ```
+
+- Installing MySQL connector
+
+    ```python
+    pip install mysql-connector-python
+    ```
+
+- Installing MySQL Speech Recognition
+
+    ```python
+    pip install SpeechRecognition
+    ```
+
+**Note:** After setting up database and installing dependencies, then the system is ready to be used.
+
+### Running and Execution
+
+
+**Note:** To run this program, execute the following script.
+
+```python
+  hate-speech-analysis-with-happytransformer/00-real-time-audio-processing/real-time-autio-analyzer.py
+```
+
+- To run this program:
+
+  ```python
+    python real-time-autio-analyzer.py
+  ```
+
+![](github-readme-content/demo.jpg)
+
+### Output
+
+![](github-readme-content/output.jpg)
+
+
+**Note:** Now, this system does not have any backend panel.
+
+## 00-real-time-audio-processing
