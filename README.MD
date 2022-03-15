@@ -68,4 +68,4 @@ The AI community building the future, build, train and deploy state of the art m
 
 ## Hate Speech Detection System
 
-In this repository, there are two different types of applications are available. Those are "00-real-time-audio-processing" and "01-text-processing-copy-paste-method".
+In this repository, there are two different types of applications are available. Those are "00-real-time-audio-processing" and "01-text-processing-copy-paste-method", both applications depends on "Hate-speech-CNERG/dehatebert-mono-english" BERT model.

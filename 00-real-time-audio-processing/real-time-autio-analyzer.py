@@ -63,7 +63,7 @@ def hate_speech_classification(text, hate_words):
 	text = text.replace("'","") # Replace ' with nothing to fix the issue.
 
 	insert_cursor = mydb.cursor()
-	sqlCode = "INSERT INTO real_time_data VALUES ('{}', '{}', '{}', '{}', '{}', '{}', '{}')".format("", str(text), hate_words_list_str , currentDate, currentTime, result.label, result.score)
+	sqlCode = "INSERT INTO processed_data VALUES ('{}', '{}', '{}', '{}', '{}', '{}', '{}')".format("", str(text), hate_words_list_str , currentDate, currentTime, result.label, (float(result.score) * 100) )
 	insert_cursor.execute(sqlCode)
 	mydb.commit()
 
