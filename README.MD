@@ -112,15 +112,39 @@ hate-speech-analysis-with-happytransformer\00-real-time-audio-processing\knowled
 
 ![](github-readme-content/know.jpg)
 
-**IMPORTANT NOTE:** Here, new hate keywords could be entered, If we want to introduce new hate keywords, we can simply enter in this knowledgebase.txt file as a new line.
+**IMPORTANT NOTE:** Here, new hate keywords could be entered, If we want to introduce new hate keywords, we can simply enter in this knowledgebase.txt file as a new line. However, the AI model is trained with different data. (We are using this model from Hugging face AI community).
 
 
 ### Why Knowledgebase?
 
-The knowledgebase filters a targeted sentence in a Non-AI method to send to the targeted text next step level.
+The knowledgebase filters a targeted sentence in a Non-AI method to send to the targeted text next step level (AI model).
 
 This prototype is specifically looking for hate speech that contains certain keywords in it.   
 
 - To reduce over-processing issue.
 - To make it easier
 - To process hate speech in a specific area
+
+
+### Configuration and Setup
+
+In this step, we will learn, how to step "00-real-time-audio-processing" project.
+
+
+#### Setup database
+
+The database is found the following directory, deploy this database in the MySQL server.
+
+```
+
+hate-speech-analysis-with-happytransformer\00-real-time-audio-processing\database\hate_speech_database.sql
+
+```
+
+**Step 01:** Create an empty database in the MySQL environment with the name of "hate_speech_database".
+
+![](github-readme-content/database-creation.jpg)
+
+
+**Step 02:** Import the databsae into that empty database.
+![](github-readme-content/import-database.jpg)
