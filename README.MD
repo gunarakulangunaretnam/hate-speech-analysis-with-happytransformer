@@ -1,4 +1,4 @@
-## Hate Speech Analysis with HappyTransformer
+# Hate Speech Analysis with HappyTransformer
 
 ## Introduction
 
