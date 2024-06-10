@@ -1,4 +1,4 @@
-# HATE SPEECH ANALYSIS WITH HAPPYTRANSFORMER
+# Hate Speech Analysis With HappyTransformer
 
 ## Introduction
 
@@ -333,7 +333,7 @@ hate-speech-analysis-with-happytransformer\02-text-processing-copy-paste-method\
 Social Media Links
 ---
 
-# CONTACT
+# Contact
 
 ### Website: 
 
